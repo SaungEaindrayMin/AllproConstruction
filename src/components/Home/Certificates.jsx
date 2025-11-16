@@ -28,6 +28,7 @@ export const Certificates = () => {
                 className="w-full aspect-square bg-gray-200 rounded-md"
               >
                 <Image
+                
                   src={src}
                   alt="certificate"
                   className="w-full h-full object-cover rounded-md"
