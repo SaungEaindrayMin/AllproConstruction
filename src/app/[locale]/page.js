@@ -8,7 +8,7 @@ import { WhoWeAre } from "@/components/Home/WhoWeAre";
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto py-24">
+    <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
       <Hero />
       <WhoWeAre />
       <Certificates/>

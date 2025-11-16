@@ -25,7 +25,7 @@ export const ServiceInfo = () => {
       {/* first row */}
       <div className="flex flex-col md:flex-row items-stretch justify-between mt-12">
         {/* text section */}
-        <div className="max-w-md space-y-6 flex-1 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md space-y-6 flex-1  ">
           <Separator />
           <div className="space-y-3">
             <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text ">Planning</h2>
@@ -67,7 +67,7 @@ export const ServiceInfo = () => {
       {/* second row */}
       <div className="flex flex-col md:flex-row-reverse items-stretch justify-between mt-12">
         {/* text section */}
-        <div className="max-w-md space-y-6 flex-1 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md space-y-6 flex-1">
           <Separator />
           <div className="space-y-3">
             <h2 className="text-3xl font-semibold  bg-text-primary-gradient text-transparent bg-clip-text">Remodeling</h2>
