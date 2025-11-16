@@ -25,7 +25,7 @@ export const Certificates = () => {
             {images.slice(0, 4).map((src, i) => (
               <div
                 key={i}
-                
+        
                 className="w-full aspect-square bg-gray-200 rounded-md"
               >
                 <Image
