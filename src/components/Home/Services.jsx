@@ -52,7 +52,7 @@ export const Services = () => {
   ];
 
   return (
-    <section className="w-full py-12">
+    <section className="w-full py-20">
       <div className="space-y-8">
         {/* Header */}
         <div className="flex flex-col lg:flex-row items-start lg:items-baseline justify-between gap-x-[20%] gap-y-4">

@@ -13,24 +13,23 @@ import { Separator } from "../ui/separator";
 
 export const Footer = () => {
   return (
-    <footer className="bg-primary-gradient text-secondary w-full py-12">
+    <footer className="bg-[#FAF7F2] text-black w-full py-20">
+      {" "}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top section */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-20 gap-y-8">
           {/* Brand */}
           <div className="space-y-3">
-            <h1 className="text-5xl font-semibold text-secondary">Allpro</h1>
-            <p className="text-muted/70">
+            <h1 className="text-5xl font-semibold ">Allpro</h1>
+            <p className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h2 className="font-medium text-lg mb-3 text-secondary">
-              Navigation
-            </h2>
-            <ul className="space-y-2 text-muted/70">
+            <h2 className="font-medium text-lg mb-3 ">Navigation</h2>
+            <ul className="space-y-2 ">
               <li>
                 <Link href="/" className="hover:text-muted transition">
                   Home
@@ -38,17 +37,17 @@ export const Footer = () => {
               </li>
               <li>
                 <Link href="/pages" className="hover:text-muted transition">
-                  Services
+                  Pages
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="hover:text-muted transition">
-                  Projects
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="hover:text-muted transition">
-                  Contact
+                  Services
                 </Link>
               </li>
             </ul>
@@ -56,10 +55,8 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h2 className="font-medium text-lg mb-3 text-secondary">
-              Quick Links
-            </h2>
-            <ul className="space-y-2 text-muted/70">
+            <h2 className="font-medium text-lg mb-3 ">Quick Links</h2>
+            <ul className="space-y-2 ">
               <li>
                 <Link href="/contact" className="hover:text-muted transition">
                   Contact Us
@@ -85,10 +82,8 @@ export const Footer = () => {
 
           {/* Services */}
           <div>
-            <h2 className="font-medium text-lg mb-3 text-secondary">
-              Services
-            </h2>
-            <ul className="space-y-2 text-muted/70">
+            <h2 className="font-medium text-lg mb-3 ">Services</h2>
+            <ul className="space-y-2 ">
               <li>
                 <Link href="/" className="hover:text-muted transition">
                   Home
@@ -134,25 +129,25 @@ export const Footer = () => {
           <div className="flex items-center gap-x-3">
             <Link
               href="/facebook"
-              className="p-2 bg-muted/50 text-primary rounded-full hover:bg-secondary transition"
+              className="p-2 bg-muted/50 rounded-full hover:bg-secondary transition"
             >
               <Facebook size={18} />
             </Link>
             <Link
               href="/twitter"
-              className="p-2 bg-muted/50 text-primary rounded-full hover:bg-secondary transition"
+              className="p-2 bg-muted/50 rounded-full hover:bg-secondary transition"
             >
               <Twitter size={18} />
             </Link>
             <Link
               href="/instagram"
-              className="p-2 bg-muted/50 text-primary rounded-full hover:bg-secondary transition"
+              className="p-2 bg-muted/50 rounded-full hover:bg-secondary transition"
             >
               <Instagram size={18} />
             </Link>
             <Link
               href="/contact"
-              className="p-2 bg-muted/50 text-primary rounded-full hover:bg-secondary transition"
+              className="p-2 bg-muted/50 rounded-full hover:bg-secondary transition"
             >
               <Mail size={18} />
             </Link>
@@ -162,7 +157,7 @@ export const Footer = () => {
         <Separator className="my-6 bg-muted/40" />
 
         {/* Bottom section */}
-        <div className="text-sm text-muted/70 mt-10 flex justify-center">
+        <div className="text-sm  mt-10 flex justify-center">
           <p>© 2025 Allpro Co. Ltd. All Rights Reserved.</p>
         </div>
       </div>
