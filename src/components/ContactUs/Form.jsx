@@ -13,25 +13,23 @@ export default function Form() {
   });
 
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const validate = () => {
     const newErrors = {};
 
-    // Name
     if (!formData.name.trim()) {
       newErrors.name = "Name is required.";
     } else if (formData.name.length < 3) {
       newErrors.name = "Name must be at least 3 characters.";
     }
 
-    // Email
     if (!formData.email.trim()) {
       newErrors.email = "Email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = "Please enter a valid email address.";
     }
 
-    // Message
     if (!formData.message.trim()) {
       newErrors.message = "Message is required.";
     } else if (formData.message.length < 10) {
@@ -42,20 +40,42 @@ export default function Form() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!validate()) return;
 
-    alert("Form submitted successfully!");
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+
+      setLoading(false);
+
+      if (res.ok) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (err) {
+      console.log(err);
+      alert("Something went wrong.");
+      setLoading(false);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-lg p-8 border border-primary/20 rounded-sm bg-muted/30">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-6 max-w-lg p-8 border border-primary/20 rounded-sm bg-muted/30"
+    >
       {/* NAME */}
       <div className="space-y-1">
-        <div>
-          <label className="text-sm font-medium text-primary">Name</label>
-        </div>
+        <label className="text-sm font-medium text-primary">Name</label>
         <Input
           placeholder="Enter your name"
           value={formData.name}
@@ -69,12 +89,9 @@ export default function Form() {
 
       {/* EMAIL */}
       <div className="space-y-1">
-        <div>
-          {" "}
-          <label className="text-sm font-medium text-primary">
-            Email Address
-          </label>
-        </div>
+        <label className="text-sm font-medium text-primary">
+          Email Address
+        </label>
         <Input
           type="email"
           placeholder="Enter your email address"
@@ -89,10 +106,7 @@ export default function Form() {
 
       {/* MESSAGE */}
       <div className="space-y-1">
-        <div>
-          {" "}
-          <label className="text-sm font-medium text-primary">Message</label>
-        </div>
+        <label className="text-sm font-medium text-primary">Message</label>
         <Textarea
           placeholder="Write your message"
           value={formData.message}
@@ -107,11 +121,9 @@ export default function Form() {
         )}
       </div>
 
-      <div>
-        <Button variant={"default"} type="submit" className="w-full">
-          Send Your Message
-        </Button>
-      </div>
+      <Button variant="default" type="submit" className="w-full">
+        {loading ? "Sending..." : "Send Your Message"}
+      </Button>
     </form>
   );
 }
