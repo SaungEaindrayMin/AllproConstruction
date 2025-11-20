@@ -6,18 +6,21 @@ import image5 from "../../../public/images/Service1.jpg";
 import image6 from "../../../public/images/WhoWeAre.jpg";
 import image7 from "../../../public/images/WhyUs.jpg";
 import Image from "next/image";
+import { useMessages } from "@/providers/I18nProvider";
 
 const images = [image1, image2, image3, image4, image5, image6, image7];
 
 export const Certificates = () => {
+  const { messages } = useMessages();
+  const t = messages.certificates;
   return (
     <section className="w-full py-12">
       <div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8">
           <span className="bg-text-primary-gradient text-transparent bg-clip-text">
-            Qualified
+            {t.qualified}
           </span>{" "}
-          Certificates
+          {t.title}
         </h1>
 
         <div className="flex flex-col items-center gap-6">
@@ -25,11 +28,9 @@ export const Certificates = () => {
             {images.slice(0, 4).map((src, i) => (
               <div
                 key={i}
-        
                 className="w-full aspect-square bg-gray-200 rounded-md"
               >
                 <Image
-                
                   src={src}
                   alt="certificate"
                   className="w-full h-full object-cover rounded-md"

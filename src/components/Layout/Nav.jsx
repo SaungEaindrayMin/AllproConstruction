@@ -11,6 +11,12 @@ export const Nav = () => {
   const containerRef = useRef(null);
   const pathname = usePathname();
 
+  const currentLocale = pathname.split("/")[1] || "en";
+  const otherLocale = currentLocale === "en" ? "th" : "en";
+
+  const switchLocaleHref =
+    "/" + otherLocale + pathname.replace(`/${currentLocale}`, "");
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/service" },
@@ -27,7 +33,6 @@ export const Nav = () => {
       } else if (currentScrollY < lastScrollY) {
         setIsScrolled(false);
       }
-
       setLastScrollY(currentScrollY);
     };
 
@@ -111,6 +116,13 @@ export const Nav = () => {
                 </Link>
               );
             })}
+            {/* Language Switch */}
+            <Link
+              href={switchLocaleHref}
+              className="px-3 py-1 rounded-md border text-sm font-medium text-muted-foreground hover:bg-gray-100"
+            >
+              {currentLocale.toUpperCase()} / {otherLocale.toUpperCase()}
+            </Link>
           </div>
 
           {/* Mobile Menu Icon */}
@@ -173,6 +185,20 @@ export const Nav = () => {
               </motion.div>
             );
           })}
+          <motion.div
+            custom={999}
+            variants={linkVariants}
+            initial="hidden"
+            animate={isOpen ? "visible" : "hidden"}
+          >
+            <Link
+              href={switchLocaleHref}
+              onClick={() => toggleOpen()}
+              className="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:bg-gray-100"
+            >
+              {currentLocale.toUpperCase()} / {otherLocale.toUpperCase()}
+            </Link>
+          </motion.div>
         </div>
       </motion.div>
     </motion.nav>

@@ -5,8 +5,17 @@ import { Button } from "../ui/button";
 import { Clock10Icon, MapPinIcon, PlusIcon } from "lucide-react";
 import project1 from "../../../public/images/Project1.jpg";
 import project2 from "../../../public/images/Project2.jpg";
+import { useMessages } from "@/providers/I18nProvider";
 
-const ProjectCard = ({ image, title, reverse = false }) => {
+const ProjectCard = ({
+  image,
+  title,
+  description,
+  location,
+  area,
+  duration,
+  reverse = false,
+}) => {
   const containerClip = reverse
     ? "polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%)"
     : "polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px)";
@@ -18,7 +27,6 @@ const ProjectCard = ({ image, title, reverse = false }) => {
       }`}
       style={{ clipPath: containerClip }}
     >
-      {/* Image Section */}
       <div className="w-full lg:w-1/2 flex justify-center">
         <div
           className="w-full max-w-lg h-64 md:h-80 lg:h-64 bg-white overflow-hidden rounded-lg"
@@ -34,28 +42,17 @@ const ProjectCard = ({ image, title, reverse = false }) => {
           />
         </div>
       </div>
-
-      {/* Text Section */}
       <div className="w-full lg:w-1/2 space-y-4 text-center lg:text-left mt-6 lg:mt-0">
         <h1 className="text-2xl md:text-3xl font-bold">{title}</h1>
+
         <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-          ratione quibusdam dolores adipisci sapiente nostrum vel illum aliquam?
-          Maxime, reiciendis.
+          {description}
         </p>
 
         <div className="space-y-3 mt-2">
-          <InfoItem
-            icon={<MapPinIcon />}
-            label="Location"
-            value="New York, USA"
-          />
-          <InfoItem
-            icon={<PlusIcon />}
-            label="Total Area"
-            value="11,000 sq. meters"
-          />
-          <InfoItem icon={<Clock10Icon />} label="Duration" value="5Y, 3M" />
+          <InfoItem icon={<MapPinIcon />} label="Location" value={location} />
+          <InfoItem icon={<PlusIcon />} label="Total Area" value={area} />
+          <InfoItem icon={<Clock10Icon />} label="Duration" value={duration} />
         </div>
       </div>
     </div>
@@ -63,8 +60,8 @@ const ProjectCard = ({ image, title, reverse = false }) => {
 };
 
 const InfoItem = ({ icon, label, value }) => (
-  <div className="flex items-center gap-2   lg:justify-start">
-    <div className="bg-primary-gradient  text-secondary rounded-full p-1">
+  <div className="flex items-center gap-2 lg:justify-start">
+    <div className="bg-primary-gradient text-secondary rounded-full p-1">
       {icon}
     </div>
     <p className="text-sm md:text-base text-muted-foreground">
@@ -74,31 +71,52 @@ const InfoItem = ({ icon, label, value }) => (
 );
 
 export const Projects = () => {
+  const { messages } = useMessages();
+  const t = messages.projects;
+  const projects = [
+    {
+      image: project1,
+      title: t.firstTitle,
+      description: t.firstDescription,
+      location: "Bangkok, Thailand",
+      area: "4,500 sq. meters",
+      duration: "1Y, 4M",
+      reverse: false,
+    },
+    {
+      image: project2,
+      title: t.secondTitle,
+      description: t.secondDescription,
+      location: "Chiang Mai, Thailand",
+      area: "2,200 sq. meters",
+      duration: "9M",
+      reverse: true,
+    },
+  ];
+
   return (
     <section className="w-full py-12 px-4 md:px-8">
-      {/* Header */}
       <div className="text-center mb-10">
         <p className="text-muted-foreground/70 text-sm md:text-base">
-          Recent Projects
+          {t.subTitle}
         </p>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-          Our{" "}
+          {t.our}{" "}
           <span className="bg-text-primary-gradient text-transparent bg-clip-text">
-            Completed Projects
+            {t.title}
           </span>
         </h1>
       </div>
 
-      {/* Projects */}
       <div className="space-y-10">
-        <ProjectCard image={project1} title="The Business Hub" />
-        <ProjectCard image={project2} title="The Creative Space" reverse />
+        {projects.map((project, index) => (
+          <ProjectCard key={index} {...project} />
+        ))}
       </div>
 
-      {/* Centered Button */}
       <div className="flex justify-center mt-10">
         <Button variant="default" className="w-40">
-          View All Projects
+          {t.button}
         </Button>
       </div>
     </section>

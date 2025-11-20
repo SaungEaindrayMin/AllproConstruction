@@ -1,12 +1,71 @@
 {
   "hero": {
-    "hello": "Hello",
+    "complete": "Complete",
     "title": "Construction & Renovation Solutions",
     "description": "From foundations to finishes — we build, repair, and transform.",
     "getQuote": "Get a Quote",
     "whyChooseUs": "Why Choose Us",
-    "projects": "Renovated and built projects",
-    "pools": "Swimming pools designed and built"
+    "firstText": "Renovated and built projects",
+    "secondText": "Swimming pools designed and built"
+  },
+  "whoWeAre": {
+    "firstTitle": "Who We Are",
+    "firstText": "Established in [Year of Establishment], [Your Company Name] has been dedicated to creating unforgettable construction and renovation experiences. Our journey started with a simple idea — to make every project extraordinary. Today, we continue to turn visions into reality.",
+    "secondTitle": "Why Us",
+    "secondText": "What makes us unique is our unwavering commitment to excellence. We're not just a construction company; we’re your trusted building partner. Discover the reasons why clients choose us for their dream spaces."
+  },
+  "services": {
+    "firstServiceTitle": "Project Planning",
+    "firstServiceDescription": "We provide accurate planning, budgeting, and timeline forecasting to ensure your construction or renovation project starts strong and stays on track.",
+    "secondServiceTitle": "Project Management",
+    "secondServiceDescription": "From procurement to on-site supervision, our team manages every phase of the project to ensure quality, safety, and timely delivery.",
+    "thirdServiceTitle": "Construction Services",
+    "thirdServiceDescription": "We handle full-scale residential and commercial construction — from foundations and structural work to finishing, installation, and handover.",
+    "fourthServiceTitle": "Interior Design",
+    "fourthServiceDescription": "Our design team transforms spaces with modern, functional, and aesthetic interior concepts tailored to your project needs.",
+    "fifthServiceTitle": "Consultancy",
+    "fifthServiceDescription": "Get expert guidance on structural improvements, material selection, renovation planning, and project feasibility before you build.",
+    "sixthServiceTitle": "Maintenance & Support",
+    "sixthServiceDescription": "We provide long-term care, repairs, and routine inspections to keep your property safe, durable, and functioning smoothly.",
+    "comprehensive": "comprehensive",
+    "title": "set of services",
+    "text": "We deliver end-to-end construction and renovation solutions designed to meet your project’s technical, aesthetic, and functional needs.",
+    "primaryButton": "Get a service",
+    "secondaryButton": "More service info"
+  },
+  "projects": {
+    "subTitle": "Recent Projects",
+    "our": "Our",
+    "title": "Completed Projects",
+    "button": "View All Projects",
+    "firstTitle": "The Business Hub",
+    "firstDescription": "A complete commercial renovation featuring structural upgrades, energy-efficient systems, and premium interior finishing designed to enhance workflow efficiency.",
+    "secondTitle": "The Creative Space",
+    "secondDescription": "A modern workspace transformation with redesigned interiors, new partitions, improved electrical systems, and durable high-quality finishes."
+  },
+  "certificates": {
+    "qualified": "Qualified",
+    "title": "Certificates"
+  },
+  "serviceInfo": {
+    "title": "Our Available",
+    "services": "Services",
+    "text": "Our comprehensive services are thoughtfully integrated to provide you with a seamless experience resulting in exceptional value and results.",
+    "firstTitle": "Planning",
+    "firstText": "Our planning process ensures every project begins with clear direction -  From site assessment to budget preparation and timeline structuring, we develop a solid foundation for successful construction and renovation outcomes.",
+    "secondTitle": "Design",
+    "secondText": "Our design team creates functional and visually appealing concepts tailored to your project - We balance aesthetics, practicality, and structural requirements to bring your vision to life with precision.",
+    "thirdTitle": "Remodeling",
+    "thirdText": "Whether it's a home renovation, room upgrade, or full interior transformation, our remodeling services deliver durable craftsmanship, improved functionality, and refined beauty in every detail.",
+    "fourthTitle": "Specialty Projects",
+    "fourthText": " From custom-built structures to unique renovation solutions, we handle specialized projects that require advanced planning,technical skill, and tailored construction methods for standout results."
+  },
+  "callToAction": {
+    "connect": "Connect",
+    "firstTitle": "with Us for",
+    "secondTitle": "Tailored Solutions",
+    "text": "Let’s bring your construction or renovation vision to life - Get expert guidance, detailed planning, and high-quality solutions customized to your project needs.",
+    "button": " Start your project today"
   }
+  
 }
-

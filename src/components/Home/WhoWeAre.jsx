@@ -3,26 +3,24 @@
 import Image from "next/image";
 import whoWeAre from "../../../public/images/WhoWeAre.jpg";
 import whyUs from "../../../public/images/WhyUs.jpg";
+import { useMessages } from "@/providers/I18nProvider";
 
 export const WhoWeAre = () => {
+  const { messages } = useMessages();
+  const t = messages.whoWeAre;
+
   return (
     <section className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 py-12 items-end">
       <div className="flex flex-col justify-start space-y-14">
         <div className="space-y-3">
           <p className="uppercase text-sm bg-text-primary-gradient text-transparent bg-clip-text tracking-[0.6em] font-bold">
-            Who We Are
+            {t.firstTitle}
           </p>
           <h2 className="text-5xl bg-text-primary-gradient text-transparent bg-clip-text font-extrabold ">
-            Who We Are
+            {t.firstTitle}
           </h2>
         </div>
-        <p className="text-muted-foreground leading-relaxed">
-          Established in [Year of Establishment], [Your Company Name] has been
-          dedicated to creating unforgettable construction and renovation
-          experiences. Our journey started with a simple idea — to make every
-          project extraordinary. Today, we continue to turn visions into
-          reality.
-        </p>
+        <p className="text-muted-foreground leading-relaxed">{t.firstText}</p>
 
         <div className="bg-card rounded-xl shadow-xs p-3 w-full">
           <Image
@@ -39,16 +37,12 @@ export const WhoWeAre = () => {
       <div className="flex flex-col justify-center bg-text-primary-gradient text-transparent bg-clip-text space-y-14">
         <div className="space-y-3">
           <p className="uppercase text-sm bg-text-primary-gradient text-transparent bg-clip-text tracking-[0.6em] font-medium">
-            Why Us
+            {t.secondTitle}
           </p>
-          <h2 className="text-5xl font-extrabold ">Why Us</h2>
+          <h2 className="text-5xl font-extrabold "> {t.secondTitle}</h2>
         </div>
 
-        <p className="text-muted-foreground leading-relaxed">
-          What makes us unique is our unwavering commitment to excellence. We're
-          not just a construction company; we’re your trusted building partner.
-          Discover the reasons why clients choose us for their dream spaces.
-        </p>
+        <p className="text-muted-foreground leading-relaxed">{t.secondText}</p>
 
         <div className="bg-card rounded-xl shadow-xs p-3 w-full">
           <Image
