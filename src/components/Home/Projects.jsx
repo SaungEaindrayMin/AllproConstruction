@@ -108,7 +108,7 @@ export const Projects = () => {
      ];
 
      return (
-          <section className="w-full py-20 px-4 md:px-8">
+          <section className="w-full py-20  md:px-8">
                <div className="text-center mb-10">
                     <p className="text-muted-foreground/70 text-sm md:text-base">
                          {t.subTitle}

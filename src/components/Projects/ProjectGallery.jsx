@@ -31,7 +31,7 @@ const images = [
 
 export const ProjectGallery = () => {
      return (
-          <section className="w-full py-20 ">
+          <section className="w-full py-20 bg-[#FAF7F2]">
                <div>
                     <div className="text-center mb-10">
                          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">

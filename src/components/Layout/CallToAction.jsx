@@ -9,7 +9,7 @@ export const CallToAction = () => {
      const { messages } = useMessages();
      const t = messages.callToAction;
      return (
-          <section className="max-w-7xl mx-auto pb-24 px-4 sm:px-6 lg:px-8">
+          <section className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
                <div className="w-full text-center space-y-10">
                     <div>
                          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium">

@@ -79,7 +79,7 @@ export const Nav = () => {
 
      return (
           <motion.nav
-               className="sticky bg-white top-0 left-0 right-0 z-50"
+               className="fixed bg-white top-0 left-0 right-0 z-50"
                initial={{ y: 0, opacity: 1 }}
                animate={{ y: isScrolled ? -100 : 0, opacity: 1 }}
                transition={{ duration: 0.4, ease: "easeInOut" }}

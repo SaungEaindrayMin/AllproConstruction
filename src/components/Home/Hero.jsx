@@ -10,7 +10,7 @@ export const Hero = () => {
      const t = messages.hero;
 
      return (
-          <section className="w-full grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-12 md:gap-20 pb-12 mt-10">
+          <section className="w-full grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-12 md:gap-20 pb-12 md:mt-10">
                {/* Left Image */}
                <div>
                     <Image
