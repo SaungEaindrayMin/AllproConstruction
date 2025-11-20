@@ -1,4 +1,5 @@
 "use client";
+
 import { motion, useCycle } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -11,23 +12,27 @@ export const Nav = () => {
   const containerRef = useRef(null);
   const pathname = usePathname();
 
-  const currentLocale = pathname.split("/")[1] || "en";
+  const segments = pathname.split("/").filter(Boolean);
+  const currentLocale = segments[0] || "en";
   const otherLocale = currentLocale === "en" ? "th" : "en";
 
-  const switchLocaleHref =
-    "/" + otherLocale + pathname.replace(`/${currentLocale}`, "");
+  const switchLocaleHref = "/" + [otherLocale, ...segments.slice(1)].join("/");
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/service" },
-    { name: "Projects", href: "/project" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", path: "" },
+    { name: "Services", path: "service" },
+    { name: "Projects", path: "project" },
+    { name: "Contact", path: "contact" },
   ];
+
+  const localizedLinks = navLinks.map((l) => ({
+    name: l.name,
+    href: l.path ? `/${currentLocale}/${l.path}` : `/${currentLocale}`,
+  }));
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setIsScrolled(true);
       } else if (currentScrollY < lastScrollY) {
@@ -45,30 +50,18 @@ export const Nav = () => {
     visible: (i) => ({
       opacity: 1,
       y: 0,
-      transition: {
-        delay: i * 0.1,
-        duration: 0.4,
-        ease: "easeOut",
-      },
+      transition: { delay: i * 0.1, duration: 0.4, ease: "easeOut" },
     }),
   };
 
   const mobileMenuVariants = {
-    closed: {
-      opacity: 0,
-      height: 0,
-      transition: { duration: 0.3, ease: "easeInOut" },
-    },
-    open: {
-      opacity: 1,
-      height: "auto",
-      transition: { duration: 0.3, ease: "easeInOut" },
-    },
+    closed: { opacity: 0, height: 0, transition: { duration: 0.3 } },
+    open: { opacity: 1, height: "auto", transition: { duration: 0.3 } },
   };
 
   const hamburgerVariants = {
-    closed: { rotate: 0, transition: { duration: 0.2 } },
-    open: { rotate: 90, transition: { duration: 0.2 } },
+    closed: { rotate: 0 },
+    open: { rotate: 90 },
   };
 
   return (
@@ -79,25 +72,23 @@ export const Nav = () => {
       transition={{ duration: 0.4, ease: "easeInOut" }}
       ref={containerRef}
     >
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            {/* <Image
-              src="/Vector.png"
-              width={36}
-              height={36}
-              alt="Connect Studio Logo"
-              priority={true}
-            /> */}
+          <Link
+            href={`/${currentLocale}`}
+            className="flex items-center space-x-3"
+          >
             <span className="text-3xl font-bold bg-text-primary-gradient text-transparent bg-clip-text leading-none">
               Allpro
             </span>
           </Link>
 
-          {/* Desktop Nav Links */}
+          {/* -----------------------------------
+              DESKTOP NAV
+          ------------------------------------*/}
           <div className="hidden md:flex items-center space-x-10">
-            {navLinks.map((link) => {
+            {localizedLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
@@ -111,11 +102,12 @@ export const Nav = () => {
                 >
                   {link.name}
                   {isActive && (
-                    <span className="absolute left-0 -bottom-1 h-2 w-full bg-primary-gradient rounded-full" />
+                    <span className="absolute left-0 -bottom-1 h-1 w-full bg-primary-gradient rounded-full" />
                   )}
                 </Link>
               );
             })}
+
             {/* Language Switch */}
             <Link
               href={switchLocaleHref}
@@ -125,7 +117,9 @@ export const Nav = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Icon */}
+          {/* -----------------------------------
+              MOBILE BUTTON
+          ------------------------------------*/}
           <div className="md:hidden flex items-center">
             <motion.button
               onClick={() => toggleOpen()}
@@ -138,7 +132,6 @@ export const Nav = () => {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   strokeLinecap="round"
@@ -154,14 +147,13 @@ export const Nav = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <motion.div
         className="md:hidden"
         animate={isOpen ? "open" : "closed"}
         variants={mobileMenuVariants}
       >
         <div className="px-4 pt-2 pb-4 space-y-2">
-          {navLinks.map((link, index) => {
+          {localizedLinks.map((link, index) => {
             const isActive = pathname === link.href;
             return (
               <motion.div
@@ -173,18 +165,20 @@ export const Nav = () => {
               >
                 <Link
                   href={link.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                  onClick={() => toggleOpen()}
+                  className={`block px-3 py-2 rounded-md text-base transition-all duration-300 ${
                     isActive
                       ? "text-muted-foreground font-bold"
-                      : "text-muted-foreground/60 font-extralight"
+                      : "text-muted-foreground/60"
                   } hover:text-primary hover:bg-gray-100`}
-                  onClick={() => toggleOpen()}
                 >
                   {link.name}
                 </Link>
               </motion.div>
             );
           })}
+
+          {/* Mobile Language Switch */}
           <motion.div
             custom={999}
             variants={linkVariants}
