@@ -15,7 +15,7 @@ export const Certificates = () => {
      const t = messages.certificates;
      return (
           <section className="w-full bg-[#FAF7F2] py-20">
-               <div>
+               <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8">
                          <span className="bg-text-primary-gradient text-transparent bg-clip-text">
                               {t.qualified}
@@ -24,7 +24,7 @@ export const Certificates = () => {
                     </h1>
 
                     <div className="flex flex-col items-center gap-6">
-                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-6xl">
+                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-7xl">
                               {images.slice(0, 4).map((src, i) => (
                                    <div
                                         key={i}
