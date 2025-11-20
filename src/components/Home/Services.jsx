@@ -1,6 +1,14 @@
 "use client";
 
-import { ArrowUpRight, Building2 } from "lucide-react";
+import {
+  ArrowUpRight,
+  Building2,
+  Wrench,
+  PaintBucket,
+  Ruler,
+  HardHat,
+  Layers,
+} from "lucide-react";
 import { Separator } from "../ui/separator";
 import { Button } from "../ui/button";
 import { GradientIcon } from "../ui/GradientIcon";
@@ -14,32 +22,32 @@ export const Services = () => {
     {
       title: t.firstServiceTitle,
       description: t.firstServiceDescription,
-      icon: Building2,
+      icon: Ruler, // Planning / Design
     },
     {
       title: t.secondServiceTitle,
       description: t.secondServiceDescription,
-      icon: Building2,
+      icon: HardHat, // Construction / Site Work
     },
     {
       title: t.thirdServiceTitle,
       description: t.thirdServiceDescription,
-      icon: Building2,
+      icon: Layers, // Architecture / Structural Work
     },
     {
       title: t.fourthServiceTitle,
       description: t.fourthServiceDescription,
-      icon: Building2,
+      icon: Wrench, // Maintenance / Repair
     },
     {
       title: t.fifthServiceTitle,
       description: t.fifthServiceDescription,
-      icon: Building2,
+      icon: PaintBucket, // Painting / Finishing
     },
     {
       title: t.sixthServiceTitle,
       description: t.sixthServiceDescription,
-      icon: Building2,
+      icon: Building2, // General building / Contracting
     },
   ];
 

@@ -38,17 +38,17 @@ export const Footer = () => {
               </li>
               <li>
                 <Link href="/pages" className="hover:text-muted transition">
-                  Pages
+                  Services
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="hover:text-muted transition">
-                  About Us
+                  Projects
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="hover:text-muted transition">
-                  Services
+                  Contact
                 </Link>
               </li>
             </ul>
