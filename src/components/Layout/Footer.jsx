@@ -1,10 +1,26 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export const Footer = () => {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
-    <footer className="bg-[#FAF7F2] text-black w-full py-20">
+    <motion.footer
+      className="bg-[#FAF7F2] text-black w-full py-20"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeUp}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
@@ -71,7 +87,6 @@ export const Footer = () => {
             </Link>
           </div>
 
-          {/* Column 3 */}
           <div className="space-y-2">
             <Link
               href="/privacy"
@@ -93,6 +108,6 @@ export const Footer = () => {
           <p>© 2025 Allpro Co. Ltd. All Rights Reserved.</p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };

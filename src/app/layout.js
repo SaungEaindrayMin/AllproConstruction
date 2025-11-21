@@ -2,7 +2,6 @@ import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Nav } from "@/components/Layout/Nav";
 import { Footer } from "@/components/Layout/Footer";
-import meta from "../../public/images/metaImage.jpg";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -57,7 +56,7 @@ export const metadata = {
     siteName: "Allpro",
     images: [
       {
-        url: { meta },
+        url: "/images/metaImage.jpg",
         width: 1200,
         height: 630,
         alt: "Allpro Construction And Renovation Services",

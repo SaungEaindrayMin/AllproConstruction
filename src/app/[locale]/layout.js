@@ -1,20 +1,26 @@
-import { CallToAction } from "@/components/Layout/CallToAction";
 import { I18nProvider } from "@/providers/I18nProvider";
 import NextTopLoader from "nextjs-toploader";
 
 async function getMessages(locale) {
-     const messages = await import(`../../../public/locales/${locale}.json`);
-     return messages.default;
+  try {
+    const messages = await import(`../../locales/${locale}.json`);
+    return messages.default;
+  } catch (err) {
+    console.warn(`Locale "${locale}" not found, falling back to English.`);
+    const messages = await import(`../../locales/en.json`);
+    return messages.default;
+  }
 }
 
 export default async function LocaleLayout({ children, params }) {
-     const { locale } = await params;
-     const messages = await getMessages(locale);
+  const locale = params.locale;
 
-     return (
-          <I18nProvider locale={locale} messages={messages}>
-               <NextTopLoader color="#1b4050" showSpinner={false} />
-               {children}
-          </I18nProvider>
-     );
+  const messages = await getMessages(locale);
+
+  return (
+    <I18nProvider locale={locale} messages={messages}>
+      <NextTopLoader color="#1b4050" showSpinner={false} />
+      {children}
+    </I18nProvider>
+  );
 }
