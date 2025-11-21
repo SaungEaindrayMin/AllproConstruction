@@ -8,7 +8,7 @@ async function getMessages(locale) {
 }
 
 export default async function LocaleLayout({ children, params }) {
-     const { locale } = params;
+     const { locale } = await params;
      const messages = await getMessages(locale);
 
      return (
