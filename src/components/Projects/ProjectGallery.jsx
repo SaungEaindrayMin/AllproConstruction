@@ -16,6 +16,7 @@ import image9 from "../../../public/images/Project1.jpg";
 import image10 from "../../../public/images/Project2.jpg";
 import image11 from "../../../public/images/Service2.png";
 import image12 from "../../../public/images/Service1.png";
+import Link from "next/link";
 
 const images = [
   image1,
@@ -99,9 +100,11 @@ export const ProjectGallery = () => {
         </motion.div>
 
         <motion.div className="flex justify-center mt-10" variants={fadeUp}>
-          <Button variant="default" className="font-light">
-            VIEW PROJECT GALLERY
-          </Button>
+          <Link href="/contact">
+            <Button variant="default" className="font-light">
+              Contact Us
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </motion.section>

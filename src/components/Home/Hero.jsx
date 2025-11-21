@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import hero from "../../../public/images/Hero.png";
 import { useMessages } from "@/providers/I18nProvider";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const Hero = () => {
   const { messages } = useMessages();
@@ -21,7 +22,11 @@ export const Hero = () => {
 
   const fadeUp = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   return (
@@ -58,11 +63,6 @@ export const Hero = () => {
         <motion.p className="text-muted-foreground text-lg" variants={fadeUp}>
           {t.description}
         </motion.p>
-
-        <motion.div className="flex flex-wrap items-center gap-3" variants={fadeUp}>
-          <Button variant="default">{t.getQuote}</Button>
-          <Button variant="secondary">{t.whyChooseUs}</Button>
-        </motion.div>
 
         <motion.div
           className="flex items-start gap-6 md:gap-10 w-full md:w-[50%]"

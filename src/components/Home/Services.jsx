@@ -14,6 +14,7 @@ import { Button } from "../ui/button";
 import { GradientIcon } from "../ui/GradientIcon";
 import { useMessages } from "@/providers/I18nProvider";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const Services = () => {
   const { messages } = useMessages();
@@ -121,8 +122,12 @@ export const Services = () => {
           className="flex items-center gap-x-4 justify-center"
           variants={fadeUp}
         >
-          <Button variant="default">{t.primaryButton}</Button>
-          <Button variant="secondary">{t.secondaryButton}</Button>
+          <Link href="/contact">
+            <Button variant="default">{t.primaryButton}</Button>
+          </Link>
+          <Link href="/service">
+            <Button variant="secondary">{t.secondaryButton}</Button>
+          </Link>
         </motion.div>
       </motion.div>
     </motion.section>

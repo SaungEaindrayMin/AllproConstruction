@@ -7,6 +7,7 @@ import project1 from "../../../public/images/Project1.jpg";
 import project2 from "../../../public/images/Project2.jpg";
 import { useMessages } from "@/providers/I18nProvider";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const ProjectCard = ({
   image,
@@ -148,9 +149,11 @@ export const Projects = () => {
       </motion.div>
 
       <motion.div className="flex justify-center mt-10" variants={fadeUp}>
-        <Button variant="default" className="w-40">
-          {t.button}
-        </Button>
+        <Link href="/project">
+          <Button variant="default" className="w-40">
+            {t.button}
+          </Button>
+        </Link>
       </motion.div>
     </motion.section>
   );
