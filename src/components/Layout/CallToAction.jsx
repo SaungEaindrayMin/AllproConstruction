@@ -35,6 +35,7 @@ export const CallToAction = () => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.div className="w-full text-center space-y-10" variants={fadeUp}>
+        
         <motion.div variants={fadeUp}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium">
             <span className="bg-text-primary-gradient text-transparent bg-clip-text">
@@ -68,6 +69,7 @@ export const CallToAction = () => {
             </div>
           </Link>
         </motion.div>
+
       </motion.div>
     </motion.section>
   );
