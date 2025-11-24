@@ -50,7 +50,6 @@ export const Nav = () => {
     open: { opacity: 1, height: "auto", transition: { duration: 0.3 } },
   };
 
-  // Updated hamburger animation variants for smooth line transitions
   const pathVariants = {
     closed: { opacity: 1 },
     open: { opacity: 0 },
@@ -62,7 +61,7 @@ export const Nav = () => {
     },
     open: {
       rotate: 45,
-      translateY: 8,
+      translateY: 4,
     },
   };
   const bottomVariants = {
@@ -86,7 +85,6 @@ export const Nav = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link
             href={`/${currentLocale}`}
             className="flex items-center space-x-3"
@@ -95,9 +93,7 @@ export const Nav = () => {
               Allpro
             </span>
           </Link>
-          {/* -----------------------------------
-              DESKTOP NAV
-          ------------------------------------*/}
+
           <div className="hidden md:flex items-center space-x-10">
             {localizedLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -118,7 +114,6 @@ export const Nav = () => {
                 </Link>
               );
             })}
-            {/* Language Switch */}
             <Link
               href={switchLocaleHref}
               className="px-3 py-1 rounded-md border text-sm font-medium text-muted-foreground hover:bg-gray-100"
@@ -126,9 +121,7 @@ export const Nav = () => {
               {otherLocale === "en" ? "EN" : "TH"}
             </Link>
           </div>
-          {/* -----------------------------------
-              MOBILE BUTTON
-          ------------------------------------*/}
+
           <div className="md:hidden flex items-center">
             <button
               onClick={() => toggleOpen()}
@@ -185,7 +178,7 @@ export const Nav = () => {
         </div>
       </div>
       <motion.div
-        className="md:hidden"
+        className="md:hidden overflow-hidden"
         animate={isOpen ? "open" : "closed"}
         variants={mobileMenuVariants}
       >
@@ -214,9 +207,8 @@ export const Nav = () => {
               </motion.div>
             );
           })}
-          {/* Mobile Language Switch */}
           <motion.div
-            custom={999}
+            custom={localizedLinks.length}
             variants={linkVariants}
             initial="hidden"
             animate={isOpen ? "visible" : "hidden"}
@@ -224,7 +216,7 @@ export const Nav = () => {
             <Link
               href={switchLocaleHref}
               onClick={() => toggleOpen()}
-              className="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:bg-gray-100"
+              className="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground bg-gray-50 hover:bg-gray-200 hover:text-primary transition"
             >
               {otherLocale === "en" ? "EN" : "TH"}
             </Link>

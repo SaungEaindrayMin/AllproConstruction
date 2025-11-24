@@ -68,6 +68,7 @@ export const Hero = () => {
             priority
           />
         </motion.div>
+
         <motion.div
           className="absolute inset-0 rounded-full  blur-3xl -z-10"
           variants={glowPulse}
@@ -76,7 +77,6 @@ export const Hero = () => {
       </motion.div>
 
       <motion.div className="space-y-8" variants={popUp}>
-
         <motion.h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight">
           <motion.span
             className="bg-text-primary-gradient text-transparent bg-clip-text"
