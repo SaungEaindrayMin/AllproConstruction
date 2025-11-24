@@ -1,9 +1,4 @@
-# *
 User-agent: *
 Allow: /
 
-# Host
-Host: https://allpro-construction-git-main-saung-eaindray-mins-projects.vercel.app/en
-
-# Sitemaps
-Sitemap: https://allpro-construction-git-main-saung-eaindray-mins-projects.vercel.app/en/sitemap.xml
+Sitemap: https://allpro-construction-git-main-saung-eaindray-mins-projects.vercel.app/sitemap.xml
