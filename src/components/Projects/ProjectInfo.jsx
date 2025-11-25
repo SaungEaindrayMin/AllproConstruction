@@ -34,7 +34,7 @@ const ProjectBlock = ({
             {location}
           </p>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-normal">
+          <h1 className="text-4xl md:text-5xl font-normal">
             {title}
           </h1>
         </div>
@@ -52,7 +52,7 @@ const ProjectBlock = ({
       </div>
 
       <div className="space-y-8">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal">
+        <h2 className="text-4xl md:text-5xl font-normal">
           Building a Healthy Future Together
         </h2>
 

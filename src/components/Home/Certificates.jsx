@@ -45,7 +45,7 @@ export const Certificates = () => {
     >
       <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8"
+          className="text-4xl md:text-5xl font-bold mb-8"
           variants={fadeScale}
         >
           <span className="bg-text-primary-gradient text-transparent bg-clip-text">

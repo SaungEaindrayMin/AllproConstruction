@@ -64,7 +64,7 @@ export const ContactForm = () => {
               </div>
 
               <div className="flex gap-4">
-                <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-primary mt-1" />
                 <div className="space-y-1">
                   <p className="font-medium">118(A) Bangkok Street</p>
                   <p className="text-muted-foreground text-sm">
@@ -74,7 +74,7 @@ export const ContactForm = () => {
               </div>
 
               <div className="flex gap-4">
-                <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <Phone className="w-5 h-5 text-primary mt-1" />
                 <div className="space-y-1">
                   <p className="font-medium">connect@gmail.com</p>
                   <p className="text-muted-foreground text-sm">

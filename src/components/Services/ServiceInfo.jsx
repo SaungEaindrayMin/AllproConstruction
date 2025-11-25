@@ -35,7 +35,7 @@ export const ServiceInfo = () => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.div className="text-center space-y-2" variants={fadeUp}>
-        <h1 className="text-5xl font-semibold">
+        <h1 className="text-4xl md:text-5xl font-semibold">
           {t.title}{" "}
           <span className="bg-text-primary-gradient text-transparent bg-clip-text">
             {t.services}

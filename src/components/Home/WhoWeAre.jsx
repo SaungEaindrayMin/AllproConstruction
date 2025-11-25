@@ -41,7 +41,7 @@ export const WhoWeAre = () => {
         variants={fadeUp}
       >
         <motion.div className="space-y-3" variants={fadeUp}>
-          <h2 className="text-5xl bg-text-primary-gradient text-transparent bg-clip-text font-extrabold">
+          <h2 className="text-4xl md:text-5xl bg-text-primary-gradient text-transparent bg-clip-text font-extrabold">
             {t.firstTitle}
           </h2>
         </motion.div>
@@ -73,7 +73,7 @@ export const WhoWeAre = () => {
         variants={fadeUp}
       >
         <motion.div className="space-y-3" variants={fadeUp}>
-          <h2 className="text-5xl bg-text-primary-gradient text-transparent bg-clip-text font-extrabold">
+          <h2 className="text-4xl md:text-5xl bg-text-primary-gradient text-transparent bg-clip-text font-extrabold">
             {t.secondTitle}
           </h2>
         </motion.div>

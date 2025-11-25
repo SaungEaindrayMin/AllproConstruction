@@ -36,13 +36,13 @@ export const CallToAction = () => {
     >
       <motion.div className="w-full text-center space-y-10" variants={fadeUp}>
         <motion.div variants={fadeUp}>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-medium">
             <span className="bg-text-primary-gradient text-transparent bg-clip-text">
               {t.connect}
             </span>{" "}
             {t.firstTitle}
           </h1>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold">
             {t.secondTitle}
           </h1>
         </motion.div>

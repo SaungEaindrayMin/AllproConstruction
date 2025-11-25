@@ -134,7 +134,7 @@ export const Projects = () => {
         <p className="text-muted-foreground/70 text-sm md:text-base">
           {t.subTitle}
         </p>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h1 className="text-4xl md:text-5xl font-bold">
           {t.our}{" "}
           <span className="bg-text-primary-gradient text-transparent bg-clip-text">
             {t.title}

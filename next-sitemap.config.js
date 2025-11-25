@@ -1,6 +1,8 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl:
-    "https://allpro-construction-git-main-saung-eaindray-mins-projects.vercel.app",
-  generateRobotsTxt: true,
+  //   siteUrl: process.env.SITE_URL || 'https://example.com',
+  siteUrl: "http://localhost:3000",
+
+  generateRobotsTxt: true, // (optional)
+  // ...other options
 };

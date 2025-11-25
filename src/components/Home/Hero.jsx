@@ -86,7 +86,7 @@ export const Hero = () => {
             {t.complete}
           </motion.span>
 
-          <span className="ml-2 flex flex-wrap gap-2">
+          <span className=" flex flex-wrap gap-2">
             {words.map((w, i) => (
               <motion.span
                 key={i}
