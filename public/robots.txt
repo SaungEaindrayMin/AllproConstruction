@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://allpro-construction.vercel.app/en
+Host: https://allpro-construction.vercel.app
 
 # Sitemaps
-Sitemap: https://allpro-construction.vercel.app/en
+Sitemap: https://allpro-construction.vercel.app/sitemap.xml
