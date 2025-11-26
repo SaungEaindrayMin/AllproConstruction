@@ -52,7 +52,7 @@ export const metadata = {
     title: "Allpro | Construction And Renovation Services",
     description:
       "Professional construction, renovation, and architecture services for all types of projects.",
-    url: "https://yourwebsite.com",
+    url: "https://allpro-construction.vercel.app/en",
     siteName: "Allpro",
     images: [
       {
