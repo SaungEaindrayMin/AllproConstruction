@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: http://localhost:3000
+Host: https://allpro-construction-git-main-saung-eaindray-mins-projects.vercel.app/en
 
 # Sitemaps
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://allpro-construction-git-main-saung-eaindray-mins-projects.vercel.app/en/sitemap.xml
