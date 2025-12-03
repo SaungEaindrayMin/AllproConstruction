@@ -77,9 +77,8 @@ export const ContactForm = () => {
                 <Phone className="w-5 h-5 text-primary mt-1" />
                 <div className="space-y-1">
                   <p className="font-medium">connect@gmail.com</p>
-                  <p className="text-muted-foreground text-sm">
-                    +(959) 893275835
-                  </p>
+                  <p className="text-muted-foreground text-sm">08 2786 7281</p>
+                  <p className="text-muted-foreground text-sm">09 4450 2569</p>
                 </div>
               </div>
             </motion.div>

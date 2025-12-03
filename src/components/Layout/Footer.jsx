@@ -24,7 +24,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold tracking-tight">Allpro</h1>
+            <h1 className="text-4xl font-bold tracking-tight">ALL PRO</h1>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Professional construction, renovation, and design services
               delivering quality and excellence.
@@ -95,7 +95,9 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>Bangkok, Thailand</p>
-              <p>+66 (000) 123 4567</p>
+              <p>☎️ 08 2786 7281</p>
+              <p>☎️ 09 4450 2569</p>
+
               <p>info@allpro.com</p>
             </div>
           </div>

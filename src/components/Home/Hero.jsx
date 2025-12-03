@@ -121,8 +121,8 @@ export const Hero = () => {
           variants={popUp}
         >
           {[
-            { value: 350, label: t.firstText },
-            { value: 70, label: t.secondText },
+            { value: 250, label: t.firstText },
+            { value: 120, label: t.secondText },
           ].map((stat, idx) => (
             <motion.div key={idx}>
               <motion.h2

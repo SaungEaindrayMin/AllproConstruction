@@ -90,7 +90,7 @@ export const Nav = () => {
             className="flex items-center space-x-3"
           >
             <span className="text-3xl font-bold bg-text-primary-gradient text-transparent bg-clip-text leading-none">
-              Allpro
+              𝐀𝐥𝐥𝐩𝐫𝐨 - 𝐁𝐔𝐈𝐋𝐃 𝐁𝐘 𝐇𝐄𝐀𝐑𝐓
             </span>
           </Link>
 

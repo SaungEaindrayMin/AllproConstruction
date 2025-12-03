@@ -67,6 +67,16 @@ export const ServiceInfo = () => {
               {t.secondText}
             </p>
           </motion.div>
+
+          <Separator />
+          <motion.div className="space-y-3" variants={fadeUp}>
+            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
+              {t.thirdTitle}
+            </h2>
+            <p className="text-sm font-medium text-muted-foreground tracking-wide">
+              {t.thirdText}
+            </p>
+          </motion.div>
           <Separator />
         </motion.div>
 
@@ -92,19 +102,29 @@ export const ServiceInfo = () => {
           <Separator />
           <motion.div className="space-y-3" variants={fadeUp}>
             <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
-              {t.thirdTitle}
+              {t.fourthTitle}
             </h2>
             <p className="text-sm font-medium text-muted-foreground tracking-wide">
-              {t.thirdText}
+              {t.fourthText}
             </p>
           </motion.div>
           <Separator />
           <motion.div className="space-y-3" variants={fadeUp}>
             <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
-              {t.fourthTitle}
+              {t.fifthTitle}
             </h2>
             <p className="text-sm font-medium text-muted-foreground tracking-wide">
-              {t.fourthText}
+              {t.fifthText}
+            </p>
+          </motion.div>
+
+          <Separator />
+          <motion.div className="space-y-3" variants={fadeUp}>
+            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
+              {t.sixthTitle}
+            </h2>
+            <p className="text-sm font-medium text-muted-foreground tracking-wide">
+              {t.sixthText}
             </p>
           </motion.div>
           <Separator />
@@ -114,6 +134,55 @@ export const ServiceInfo = () => {
           <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen md:static md:w-full md:mx-0">
             <Image
               src={Service2}
+              alt="service image"
+              width={1920}
+              height={1080}
+              placeholder="blur"
+              className="object-cover w-full h-[400px] md:h-full"
+            />
+          </div>
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        className="flex flex-col md:flex-row items-stretch justify-between mt-12"
+        variants={fadeUp}
+      >
+        <motion.div className="max-w-md space-y-6 flex-1" variants={container}>
+          <Separator />
+          <motion.div className="space-y-3" variants={fadeUp}>
+            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
+              {t.seventhTitle}
+            </h2>
+            <p className="text-sm font-medium text-muted-foreground tracking-wide">
+              {t.seventhText}
+            </p>
+          </motion.div>
+          <Separator />
+          <motion.div className="space-y-3" variants={fadeUp}>
+            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
+              {t.eightTitle}
+            </h2>
+            <p className="text-sm font-medium text-muted-foreground tracking-wide">
+              {t.eightText}
+            </p>
+          </motion.div>
+          <Separator />
+          <motion.div className="space-y-3" variants={fadeUp}>
+            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
+              {t.ninthTitle}
+            </h2>
+            <p className="text-sm font-medium text-muted-foreground tracking-wide">
+              {t.ninthText}
+            </p>
+          </motion.div>
+          <Separator />
+        </motion.div>
+
+        <motion.div className="w-full md:w-1/2" variants={fadeUp}>
+          <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen md:static md:w-full md:mx-0">
+            <Image
+              src={Service1}
               alt="service image"
               width={1920}
               height={1080}
