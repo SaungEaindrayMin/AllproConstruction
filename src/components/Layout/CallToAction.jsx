@@ -60,12 +60,16 @@ export const CallToAction = () => {
                     <motion.div variants={fadeUp}>
                          <Link href="/contact" className="cursor-pointer">
                               <div className="flex justify-center">
-                                   <div className="group flex items-center justify-between gap-x-3 md:w-[35%] lg:w-[25%] hover:bg-primary bg-muted-foreground/10 p-3 rounded-full transition-colors duration-300">
-                                        <p className="text-lg font-medium text-primary ps-1 group-hover:text-white">
+                                   <div className="group flex items-center justify-between gap-x-3 md:w-[35%] lg:w-[25%] bg-muted-foreground/10 p-3 rounded-full transition-colors duration-300 hover:bg-primary">
+                                        <p className="text-lg font-medium text-primary ps-1 transition-colors duration-300 group-hover:text-white">
                                              {t.button}
                                         </p>
-                                        <Button className="p-2 bg-primary rounded-full group-hover:bg-white hover:bg-white border-none">
-                                             <ArrowRight className="text-white group-hover:text-primary" />
+
+                                        <Button
+                                             className="p-2 rounded-full border-none transition-colors duration-300
+          bg-primary group-hover:bg-white hover:bg-white"
+                                        >
+                                             <ArrowRight className=" text-white group-hover:text-primary hover:text-primary transition-colors duration-300" />
                                         </Button>
                                    </div>
                               </div>

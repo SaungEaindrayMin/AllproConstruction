@@ -46,11 +46,64 @@ export const Certificates = () => {
                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                          <motion.div variants={fadeScale}>
-                              <Image
-                                   src={image2}
-                                   alt="Certificate preview"
-                                   className="rounded-xl w-full h-auto md:h-[700px] object-cover"
-                              />
+                              {/* <Image src={image2} alt="Certificate preview" className="rounded-xl w-full h-auto md:h-[700px] object-cover" />*/}
+                              <motion.div
+                                   initial={{ opacity: 0, y: 20 }}
+                                   animate={{ opacity: 1, y: 0 }}
+                                   transition={{
+                                        duration: 0.6,
+                                        ease: "easeOut",
+                                   }}
+                                   className="relative w-full max-w-3xl mx-auto"
+                              >
+                                   {/* OUTER GOLD FRAME */}
+                                   <motion.div
+                                        initial={{ scale: 0.95 }}
+                                        animate={{ scale: 1 }}
+                                        transition={{
+                                             duration: 0.6,
+                                             ease: "easeOut",
+                                        }}
+                                        className="relative p-2 rounded-3xl bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-700 shadow-2xl shadow-yellow-900/40"
+                                   >
+                                        {/* GOLD SHIMMER EFFECT */}
+                                        <motion.div
+                                             initial={{ x: "-150%" }}
+                                             animate={{ x: "150%" }}
+                                             transition={{
+                                                  duration: 2,
+                                                  repeat: Infinity,
+                                                  repeatType: "mirror",
+                                                  ease: "linear",
+                                             }}
+                                             className="absolute inset-0 rounded-3xl opacity-30 bg-gradient-to-r from-transparent via-white to-transparent pointer-events-none"
+                                        />
+
+                                        {/* INNER PANEL */}
+                                        <div className="relative p-1 rounded-2xl bg-white overflow-hidden">
+                                             {/* Decorative gold corners */}
+                                             <div className="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-yellow-600 rounded-tl-2xl" />
+                                             <div className="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-yellow-600 rounded-tr-2xl" />
+                                             <div className="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-yellow-600 rounded-bl-2xl" />
+                                             <div className="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-yellow-600 rounded-br-2xl" />
+
+                                             {/* SHINE OVER IMAGE */}
+                                             <motion.div
+                                                  initial={{ opacity: 0 }}
+                                                  animate={{ opacity: 0.15 }}
+                                                  transition={{ duration: 1 }}
+                                                  className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent pointer-events-none"
+                                             />
+
+                                             {/* IMAGE */}
+                                             <Image
+                                                  src={image2}
+                                                  alt="Certificate preview"
+                                                  className="rounded-xl w-full h-auto md:h-[700px] object-cover"
+                                             />
+                                        </div>
+                                   </motion.div>
+                              </motion.div>
                          </motion.div>
 
                          {/* RIGHT CONTENT */}
