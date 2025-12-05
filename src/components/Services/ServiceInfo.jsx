@@ -4,9 +4,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Service1 from "../../../public/images/Service1.png";
 import Service2 from "../../../public/images/Service2.png";
+import electrical from "../../../public/images/electrical.png";
+import officeinterior from "../../../public/images/officeinterior.png";
 import air from "../../../public/images/aircondition.png";
+import tileinstallation from "../../../public/images/tileinstallation.png";
+import painting from "../../../public/images/painting.png";
 import pipe from "../../../public/images/watepipes.png";
 import waterSystem from "../../../public/images/watersystem.avif";
+
 
 import { useMessages } from "@/providers/I18nProvider";
 

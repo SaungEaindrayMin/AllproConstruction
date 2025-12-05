@@ -3,12 +3,11 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Clock10Icon, MapPinIcon, PlusIcon } from "lucide-react";
-import project1 from "../../../public/images/Project1.jpg";
-import project2 from "../../../public/images/Project2.jpg";
+import project1 from "../../../public/images/BurasiriKrungthep.jpeg";
+import project2 from "../../../public/images/JapaneseRestaurant.jpg";
 import { useMessages } from "@/providers/I18nProvider";
 import { motion } from "framer-motion";
 import Link from "next/link";
-
 const ProjectCard = ({
   image,
   title,

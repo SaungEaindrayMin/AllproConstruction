@@ -1,9 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion"; // import framer-motion
-import building1 from "../../../public/images/ProjectBuilding.png";
-import building2 from "../../../public/images/ProjectBuilding2.png";
+import { motion } from "framer-motion";
+import building1 from "../../../public/images/BurasiriKrungthep.jpeg";
+import building2 from "../../../public/images/JapaneseRestaurant.jpg";
+import building3 from "../../../public/images/Sukhumvit61.jpeg";
+import building4 from "../../../public/images/angelbar.jpg";
+import building5 from "../../../public/images/LifeRama4.jpg";
+
 import { useMessages } from "@/providers/I18nProvider";
 
 const fadeUp = {
@@ -74,14 +78,14 @@ export const ProjectInfo = () => {
         />
 
         <ProjectBlock
-          image={building1}
+          image={building3}
           location={t.thirdServiceArea}
           title={t.thirdTitle}
           description={t.thirdText}
         />
 
         <ProjectBlock
-          image={building2}
+          image={building4}
           location={t.fourthServiceArea}
           title={t.fourthTitle}
           description={t.fourthText}
@@ -89,7 +93,7 @@ export const ProjectInfo = () => {
         />
 
         <ProjectBlock
-          image={building1}
+          image={building5}
           location={t.fifthServiceArea}
           title={t.fifthTitle}
           description={t.fifthText}
