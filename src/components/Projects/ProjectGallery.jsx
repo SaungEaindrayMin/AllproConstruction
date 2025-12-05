@@ -7,12 +7,14 @@ import { motion } from "framer-motion";
 import image1 from "../../../public/images/Hero.png";
 import image2 from "../../../public/images/aircondition.png";
 import image3 from "../../../public/images/watepipes.png";
-import image4 from "../../../public/images/Service2.png";
-import image5 from "../../../public/images/Service1.png";
+import image4 from "../../../public/images/LifeRama4.jpg";
+import image5 from "../../../public/images/Sukhumvit61.jpeg";
 import image6 from "../../../public/images/WhoWeAre.png";
 import image7 from "../../../public/images/WhyUs.png";
-import image8 from "../../../public/images/Hero.png";
+import image8 from "../../../public/images/BurasiriKrungthep.jpeg";
 import image9 from "../../../public/images/watersystem.avif";
+
+
 
 
 
