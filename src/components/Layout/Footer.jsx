@@ -68,16 +68,13 @@ export const Footer = () => {
                 href="https://www.facebook.com/allprothailand"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-full border border-primary/10 
-                 bg-transparent hover:bg-primary hover:text-white transition-colors"
+                
               >
-                <span className="text-lg font-bold">f</span>
+                <p className=" text-sm text-muted-foreground">
+                  Follow us on Facebook
+                </p>
               </Link>
             </div>
-
-            <p className="mt-3 text-sm text-muted-foreground">
-              Follow us on Facebook
-            </p>
           </div>
 
           <div>
