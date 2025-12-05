@@ -66,19 +66,26 @@ export const ContactForm = () => {
               <div className="flex gap-4">
                 <MapPin className="w-5 h-5 text-primary mt-1" />
                 <div className="space-y-1">
-                  <p className="font-medium">118(A) Bangkok Street</p>
+                  <p className="font-medium">Address</p>
                   <p className="text-muted-foreground text-sm">
-                    London Eye, London, UK
+                    Bangkok, Thailand
                   </p>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <Phone className="w-5 h-5 text-primary mt-1" />
-                <div className="space-y-1">
-                  <p className="font-medium">connect@gmail.com</p>
-                  <p className="text-muted-foreground text-sm">08 2786 7281</p>
-                  <p className="text-muted-foreground text-sm">09 4450 2569</p>
+                <div className="space-y-1 flex flex-col">
+                  <a href="mailto:info@allpro.com">
+                    <p>info@allpro.com</p>
+                  </a>
+                  <a href="tel:0827867281" className="text-muted-foreground text-sm">
+                    <p> 08 2786 7281</p>
+                  </a>
+
+                  <a href="tel:0944502569" className="text-muted-foreground text-sm">
+                    <p>09 4450 2569</p>
+                  </a>
                 </div>
               </div>
             </motion.div>

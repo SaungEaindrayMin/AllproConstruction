@@ -36,10 +36,12 @@
     "our": "ผลงาน",
     "title": "โครงการที่เสร็จสมบูรณ์",
     "button": "ดูโครงการทั้งหมด",
-    "firstTitle": "The Business Hub",
-    "firstDescription": "งานรีโนเวทอาคารพาณิชย์ครบวงจร รวมถึงปรับโครงสร้าง ระบบประหยัดพลังงาน และงานตกแต่งระดับพรีเมียมเพื่อเพิ่มประสิทธิภาพการทำงาน",
-    "secondTitle": "The Creative Space",
-    "secondDescription": "การปรับโฉมห้องทำงานใหม่ด้วยการแบ่งพื้นที่ ทำระบบไฟใหม่ และตกแต่งด้วยวัสดุคุณภาพสูง"
+    "firstTitle": "Burasiri Krungthep Kreetha Housing All in One Renovation",
+    "firstServiceArea": "Krungthep Kreetha, Bangkok",
+    "firstService": "การปรับปรุงและตกแต่ง การเปลี่ยนแปลงบ้านอย่างสมบูรณ์ ครอบคลุมทั้งภายใน ภายนอก และการปรับปรุงฟังก์ชันการใช้งาน",
+    "secondTitle": "Japanese Restaurant from On Nut Plaza Renovation & Decoration ",
+    "secondServiceArea": "On Nut, Bangkok",
+    "secondService": "การปรับปรุงและตกแต่ง การออกแบบใหม่สไตล์ญี่ปุ่นที่อบอุ่น เพื่อยกระดับประสบการณ์การรับประทานอาหาร"
   },
   "certificates": {
     "qualified": "มีคุณสมบัติรับรอง",
@@ -67,6 +69,28 @@
     "eightText": "ติดตั้งระบบน้ำร้อนและน้ำเย็นอย่างได้มาตรฐาน พร้อมรองรับการใช้งานในระยะยาว",
     "ninthTitle": "บริการจัดครัวและทำความสะอาดห้องครบชุด",
     "ninthText": "บริการจัดห้องครัว ติดตั้งอุปกรณ์ และทำความสะอาดแบบเต็มรูปแบบ"
+  },
+  "projectInfo": {
+    "firstTitle": "Burasiri Krungthep Kreetha Housing All in One Renovation",
+    "firstServiceArea": "Krungthep Kreetha, Bangkok",
+    "firstService": "การปรับปรุงและตกแต่ง การเปลี่ยนแปลงบ้านอย่างสมบูรณ์ ครอบคลุมทั้งภายใน ภายนอก และการปรับปรุงฟังก์ชันการใช้งาน",
+    "firstText": "The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.",
+    "secondTitle": "Japanese Restaurant from On Nut Plaza Renovation & Decoration ",
+    "secondServiceArea": "On Nut, Bangkok",
+    "secondService": "การปรับปรุงและตกแต่ง การออกแบบใหม่สไตล์ญี่ปุ่นที่อบอุ่น เพื่อยกระดับประสบการณ์การรับประทานอาหาร",
+    "secondText": "The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.",
+    "thirdTitle": "The Bangkok Sukhumvit 61 Condo Room Renovation ",
+    "thirdServiceArea": "Sukhumvit 61, Bangkok",
+    "thirdService": "การปรับปรุงและตกแต่ง การอัปเกรดคอนโดอย่างเต็มรูปแบบ ออกแบบเพื่อชีวิตเมืองที่ทันสมัยและสะดวกสบาย",
+    "thirdText": "The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.",
+    "fourthTitle": "Thai Angel Bar  Renovation & Decoration",
+    "fourthServiceArea": "Bangkok",
+    "fourthService": "การปรับปรุงและตกแต่ง การปรับโฉมบาร์อย่างเต็มรูปแบบ พร้อมแสงสว่างที่ปรับปรุง พื้นที่นั่งอัจฉริยะ และบรรยากาศตามแบรนด์",
+    "fourthText": "The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.",
+    "fifthTitle": "Life Rama 4 - Asoke Condo Room Renovation from Earthquake Damage",
+    "fifthServiceArea": "Asoke, Bangkok",
+    "fifthService": "การปรับปรุงและตกแต่ง การฟื้นฟูและออกแบบใหม่หลังความเสียหายจากแผ่นดินไหว เพื่อความปลอดภัยและการตกแต่งภายในที่สดใหม่",
+    "fifthText": "The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics."
   },
   "callToAction": {
     "connect": "ติดต่อ",

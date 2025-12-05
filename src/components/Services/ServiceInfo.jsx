@@ -1,196 +1,91 @@
 "use client";
 
 import Image from "next/image";
-import { Separator } from "../ui/separator";
+import { motion } from "framer-motion";
 import Service1 from "../../../public/images/Service1.png";
 import Service2 from "../../../public/images/Service2.png";
+import air from "../../../public/images/aircondition.png";
+import pipe from "../../../public/images/watepipes.png";
+import waterSystem from "../../../public/images/watersystem.avif";
+
 import { useMessages } from "@/providers/I18nProvider";
-import { motion } from "framer-motion";
 
 export const ServiceInfo = () => {
   const { messages } = useMessages();
   const t = messages.serviceInfo;
 
-  const container = {
-    hidden: {},
-    visible: {
-      transition: { staggerChildren: 0.2 },
-    },
-  };
+  const services = [
+    { title: t.firstTitle, text: t.firstText, image: Service1 },
+    { title: t.secondTitle, text: t.secondText, image: Service2 },
+    { title: t.thirdTitle, text: t.thirdText, image: air },
+    { title: t.fourthTitle, text: t.fourthText, image: Service2 },
+    { title: t.fifthTitle, text: t.fifthText, image: Service1 },
+    { title: t.sixthTitle, text: t.sixthText, image: Service2 },
+    { title: t.seventhTitle, text: t.seventhText, image: pipe },
+    { title: t.eightTitle, text: t.eightText, image: waterSystem },
+    { title: t.ninthTitle, text: t.ninthText, image: Service1 },
+  ];
 
   const fadeUp = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
   return (
     <motion.section
-      variants={container}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
+      className="mt-20"
     >
-      <motion.div className="text-center space-y-2" variants={fadeUp}>
+      <motion.div className="text-center space-y-2 mb-12" variants={fadeUp}>
         <h1 className="text-4xl md:text-5xl font-semibold">
           {t.title}{" "}
           <span className="bg-text-primary-gradient text-transparent bg-clip-text">
             {t.services}
           </span>
         </h1>
+
         <p className="text-muted-foreground max-w-2xl mx-auto">{t.text}</p>
       </motion.div>
 
       <motion.div
-        className="flex flex-col md:flex-row items-stretch justify-between mt-12"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         variants={fadeUp}
       >
-        <motion.div className="max-w-md space-y-6 flex-1" variants={container}>
-          <Separator />
-          <motion.div className="space-y-3" variants={fadeUp}>
-            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
-              {t.firstTitle}
-            </h2>
-            <p className="text-sm font-medium text-muted-foreground tracking-wide">
-              {t.firstText}
-            </p>
-          </motion.div>
-          <Separator />
-          <motion.div className="space-y-3" variants={fadeUp}>
-            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
-              {t.secondTitle}
-            </h2>
-            <p className="text-sm font-medium text-muted-foreground tracking-wide">
-              {t.secondText}
-            </p>
-          </motion.div>
+        {services.map((service, i) => (
+          <motion.div
+            key={i}
+            className="relative group cursor-pointer overflow-hidden rounded-xl  border border-primary/20 bg-secondary"
+          >
+            <div className="w-full h-56 bg-gray-200 overflow-hidden">
+              <Image
+                src={service.image}
+                alt={service.title}
+                width={800}
+                height={600}
+                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
 
-          <Separator />
-          <motion.div className="space-y-3" variants={fadeUp}>
-            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
-              {t.thirdTitle}
-            </h2>
-            <p className="text-sm font-medium text-muted-foreground tracking-wide">
-              {t.thirdText}
-            </p>
-          </motion.div>
-          <Separator />
-        </motion.div>
+            <div className="p-5 space-y-2">
+              <h2 className="text-lg font-semibold text-gray-800 leading-snug line-clamp-2">
+                {service.title}
+              </h2>
+            </div>
 
-        <motion.div className="w-full md:w-1/2" variants={fadeUp}>
-          <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen md:static md:w-full md:mx-0">
-            <Image
-              src={Service1}
-              alt="service image"
-              width={1920}
-              height={1080}
-              placeholder="blur"
-              className="object-cover w-full h-[400px] md:h-full"
-            />
-          </div>
-        </motion.div>
-      </motion.div>
-
-      <motion.div
-        className="flex flex-col md:flex-row-reverse items-stretch justify-between mt-12"
-        variants={fadeUp}
-      >
-        <motion.div className="max-w-md space-y-6 flex-1" variants={container}>
-          <Separator />
-          <motion.div className="space-y-3" variants={fadeUp}>
-            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
-              {t.fourthTitle}
-            </h2>
-            <p className="text-sm font-medium text-muted-foreground tracking-wide">
-              {t.fourthText}
-            </p>
+            <div
+              className="
+      absolute inset-0 bg-black/80 opacity-0 
+      group-hover:opacity-100 
+      transition-opacity duration-500 
+      flex flex-col justify-center items-center text-center px-6 text-secondary
+    "
+            >
+              <p className="text-sm text-secondary">{service.text}</p>
+            </div>
           </motion.div>
-          <Separator />
-          <motion.div className="space-y-3" variants={fadeUp}>
-            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
-              {t.fifthTitle}
-            </h2>
-            <p className="text-sm font-medium text-muted-foreground tracking-wide">
-              {t.fifthText}
-            </p>
-          </motion.div>
-
-          <Separator />
-          <motion.div className="space-y-3" variants={fadeUp}>
-            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
-              {t.sixthTitle}
-            </h2>
-            <p className="text-sm font-medium text-muted-foreground tracking-wide">
-              {t.sixthText}
-            </p>
-          </motion.div>
-          <Separator />
-        </motion.div>
-
-        <motion.div className="w-full md:w-1/2" variants={fadeUp}>
-          <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen md:static md:w-full md:mx-0">
-            <Image
-              src={Service2}
-              alt="service image"
-              width={1920}
-              height={1080}
-              placeholder="blur"
-              className="object-cover w-full h-[400px] md:h-full"
-            />
-          </div>
-        </motion.div>
-      </motion.div>
-
-      <motion.div
-        className="flex flex-col md:flex-row items-stretch justify-between mt-12"
-        variants={fadeUp}
-      >
-        <motion.div className="max-w-md space-y-6 flex-1" variants={container}>
-          <Separator />
-          <motion.div className="space-y-3" variants={fadeUp}>
-            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
-              {t.seventhTitle}
-            </h2>
-            <p className="text-sm font-medium text-muted-foreground tracking-wide">
-              {t.seventhText}
-            </p>
-          </motion.div>
-          <Separator />
-          <motion.div className="space-y-3" variants={fadeUp}>
-            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
-              {t.eightTitle}
-            </h2>
-            <p className="text-sm font-medium text-muted-foreground tracking-wide">
-              {t.eightText}
-            </p>
-          </motion.div>
-          <Separator />
-          <motion.div className="space-y-3" variants={fadeUp}>
-            <h2 className="text-3xl font-semibold bg-text-primary-gradient text-transparent bg-clip-text">
-              {t.ninthTitle}
-            </h2>
-            <p className="text-sm font-medium text-muted-foreground tracking-wide">
-              {t.ninthText}
-            </p>
-          </motion.div>
-          <Separator />
-        </motion.div>
-
-        <motion.div className="w-full md:w-1/2" variants={fadeUp}>
-          <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen md:static md:w-full md:mx-0">
-            <Image
-              src={Service1}
-              alt="service image"
-              width={1920}
-              height={1080}
-              placeholder="blur"
-              className="object-cover w-full h-[400px] md:h-full"
-            />
-          </div>
-        </motion.div>
+        ))}
       </motion.div>
     </motion.section>
   );

@@ -1,7 +1,7 @@
 {
   "hero": {
     "complete": "Complete",
-    "title": "Complete Construction & Renovation Solutions In Thailand",
+    "title": "Construction & Renovation Solutions In Thailand",
     "description": "From the first step to the final touch, we build, design and renovate homes and workplaces with care, affordable price, high quality, and reliable service.",
     "firstText": "Renovated and built projects",
     "secondText": "Completed Repair Services"
@@ -36,10 +36,12 @@
     "our": "Our",
     "title": "Completed Projects",
     "button": "View All Projects",
-    "firstTitle": "The Business Hub",
-    "firstDescription": "A complete commercial renovation featuring structural upgrades, energy-efficient systems, and premium interior finishing designed to enhance workflow efficiency.",
-    "secondTitle": "The Creative Space",
-    "secondDescription": "A modern workspace transformation with redesigned interiors, new partitions, improved electrical systems, and durable high-quality finishes."
+    "firstTitle": "Burasiri Krungthep Kreetha Housing All in One Renovation",
+    "firstServiceArea": "Krungthep Kreetha, Bangkok",
+    "firstService": "Renovation & Decoration A complete home transformation covering interior, exterior, and functional improvements.",
+    "secondTitle": "Japanese Restaurant from On Nut Plaza Renovation & Decoration ",
+    "secondServiceArea": "On Nut, Bangkok",
+    "secondService": "Renovation & DecorationA warm, Japanese-style redesign to elevate the dining experience."
   },
   "certificates": {
     "qualified": "Qualified",
@@ -67,6 +69,28 @@
     "eightText": " From custom-built structures to unique renovation solutions, we handle specialized projects that require advanced planning,technical skill, and tailored construction methods for standout results.",
     "ninthTitle": " Kitchen setup and full room cleaning services",
     "ninthText": " From custom-built structures to unique renovation solutions, we handle specialized projects that require advanced planning,technical skill, and tailored construction methods for standout results."
+  },
+  "projectInfo": {
+    "firstTitle": "Burasiri Krungthep Kreetha Housing All in One Renovation",
+    "firstServiceArea": "Krungthep Kreetha, Bangkok",
+    "firstService": "Renovation & Decoration A complete home transformation covering interior, exterior, and functional improvements.",
+    "firstText": "The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.",
+    "secondTitle": "Japanese Restaurant from On Nut Plaza Renovation & Decoration ",
+    "secondServiceArea": "On Nut, Bangkok",
+    "secondService": "Renovation & DecorationA warm, Japanese-style redesign to elevate the dining experience.",
+    "secondText": "The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.",
+    "thirdTitle": "The Bangkok Sukhumvit 61 Condo Room Renovation ",
+    "thirdServiceArea": "Sukhumvit 61, Bangkok",
+    "thirdService": " Renovation & Decoration A full condo upgrade designed for modern, comfortable city living.",
+    "thirdText": "The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.",
+    "fourthTitle": "Thai Angel Bar  Renovation & Decoration",
+    "fourthServiceArea": "Bangkok",
+    "fourthService": " Renovation & Decoration A full bar makeover with enhanced lighting, smart seating, and brand-driven ambiance.",
+    "fourthText": "The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.",
+    "fifthTitle": "Life Rama 4 - Asoke Condo Room Renovation from Earthquake Damage",
+    "fifthServiceArea": "Asoke, Bangkok",
+    "fifthService": "Renovation & Decoration Restoration and redesign after earthquake damage, ensuring safety and a fresh new interior..",
+    "fifthText": "The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics."
   },
   "callToAction": {
     "connect": "Connect",

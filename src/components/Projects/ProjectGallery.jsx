@@ -5,17 +5,17 @@ import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 
 import image1 from "../../../public/images/Hero.png";
-import image2 from "../../../public/images/Project1.jpg";
-import image3 from "../../../public/images/Project2.jpg";
+import image2 from "../../../public/images/aircondition.png";
+import image3 from "../../../public/images/watepipes.png";
 import image4 from "../../../public/images/Service2.png";
 import image5 from "../../../public/images/Service1.png";
 import image6 from "../../../public/images/WhoWeAre.png";
 import image7 from "../../../public/images/WhyUs.png";
 import image8 from "../../../public/images/Hero.png";
-import image9 from "../../../public/images/Project1.jpg";
-import image10 from "../../../public/images/Project2.jpg";
-import image11 from "../../../public/images/Service2.png";
-import image12 from "../../../public/images/Service1.png";
+import image9 from "../../../public/images/watersystem.avif";
+
+
+
 import Link from "next/link";
 
 const images = [
@@ -27,10 +27,7 @@ const images = [
   image6,
   image7,
   image8,
-  image9,
-  image10,
-  image11,
-  image12,
+  image9
 ];
 
 export const ProjectGallery = () => {
@@ -88,7 +85,7 @@ export const ProjectGallery = () => {
           {images.map((src, i) => (
             <motion.div
               key={i}
-              className="h-24 sm:h-32 md:h-36 lg:h-40 w-auto overflow-hidden rounded-sm"
+              className="h-36 sm:h-40 md:h-46 lg:h-52 w-auto overflow-hidden rounded-sm"
               variants={fadeScale}
             >
               <Image

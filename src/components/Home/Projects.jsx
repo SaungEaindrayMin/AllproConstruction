@@ -14,8 +14,6 @@ const ProjectCard = ({
   title,
   description,
   location,
-  area,
-  duration,
   reverse = false,
 }) => {
   const containerClip = reverse
@@ -55,16 +53,14 @@ const ProjectCard = ({
         </div>
       </div>
       <div className="w-full lg:w-1/2 space-y-4 text-center lg:text-left mt-6 lg:mt-0">
-        <h1 className="text-2xl md:text-3xl font-bold">{title}</h1>
+        <h1 className="text-xl md:text-2xl font-bold">{title}</h1>
 
-        <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+        <p className="text-muted-foreground leading-relaxed text-xs md:text-base">
           {description}
         </p>
 
         <div className="space-y-3 mt-2">
           <InfoItem icon={<MapPinIcon />} label="Location" value={location} />
-          <InfoItem icon={<PlusIcon />} label="Total Area" value={area} />
-          <InfoItem icon={<Clock10Icon />} label="Duration" value={duration} />
         </div>
       </div>
     </motion.div>
@@ -89,19 +85,16 @@ export const Projects = () => {
     {
       image: project1,
       title: t.firstTitle,
-      description: t.firstDescription,
-      location: "Bangkok, Thailand",
-      area: "4,500 sq. meters",
-      duration: "1Y, 4M",
+      description: t.firstService,
+      location: t.firstServiceArea,
       reverse: false,
     },
     {
       image: project2,
       title: t.secondTitle,
-      description: t.secondDescription,
-      location: "Chiang Mai, Thailand",
-      area: "2,200 sq. meters",
-      duration: "9M",
+      description: t.secondService,
+      location: t.firstServiceArea,
+
       reverse: true,
     },
   ];

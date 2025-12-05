@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 import building1 from "../../../public/images/ProjectBuilding.png";
 import building2 from "../../../public/images/ProjectBuilding2.png";
+import { useMessages } from "@/providers/I18nProvider";
 
 const ProjectBlock = ({
   image,
@@ -34,9 +35,7 @@ const ProjectBlock = ({
             {location}
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-normal">
-            {title}
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-normal">{title}</h1>
         </div>
 
         <div className={`${reverse ? "lg:order-1" : ""}`}>
@@ -52,10 +51,6 @@ const ProjectBlock = ({
       </div>
 
       <div className="space-y-8">
-        <h2 className="text-4xl md:text-5xl font-normal">
-          Building a Healthy Future Together
-        </h2>
-
         <p className="text-lg tracking-wide text-muted-foreground font-light">
           {description}
         </p>
@@ -65,8 +60,8 @@ const ProjectBlock = ({
 };
 
 export const ProjectInfo = () => {
-  const description =
-    "The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.";
+  const { messages } = useMessages();
+  const t = messages.projectInfo;
 
   const container = {
     hidden: {},
@@ -84,17 +79,37 @@ export const ProjectInfo = () => {
       <div className="space-y-[20%]">
         <ProjectBlock
           image={building1}
-          location="ST. PETERSBURG, FLORIDA | UNITED STATES"
-          title="Bayfront Health Medical Pavilion at Institute Square"
-          description={description}
+          location={t.firstServiceArea}
+          title={t.firstTitle}
+          description={t.firstText}
         />
 
         <ProjectBlock
           image={building2}
-          location="ST. PETERSBURG, FLORIDA | UNITED STATES"
-          title="Bayfront Health Medical Pavilion at Institute Square"
-          description={description}
+          location={t.secondServiceArea}
+          title={t.secondTitle}
+          description={t.secondText}
           reverse
+        />
+        <ProjectBlock
+          image={building1}
+          location={t.thirdServiceArea}
+          title={t.thirdTitle}
+          description={t.thirdText}
+        />
+
+        <ProjectBlock
+          image={building2}
+          location={t.fourthServiceArea}
+          title={t.fourthTitle}
+          description={t.fourthText}
+          reverse
+        />
+        <ProjectBlock
+          image={building1}
+          location={t.fifthServiceArea}
+          title={t.fifthTitle}
+          description={t.fifthText}
         />
       </div>
     </motion.section>
