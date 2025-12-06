@@ -14,11 +14,6 @@ import image7 from "../../../public/images/WhyUs.png";
 import image8 from "../../../public/images/watersystem.avif";
 import image9 from "../../../public/images/BurasiriKrungthep.jpeg";
 
-
-
-
-
-
 import Link from "next/link";
 
 const images = [
