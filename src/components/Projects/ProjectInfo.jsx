@@ -32,6 +32,9 @@ const ProjectBlock = ({ image, title, location, description, reverse = false }) 
             {location}
           </p>
           <h1 className="text-4xl md:text-5xl font-normal">{title}</h1>
+                  <p className="text-lg tracking-wide text-muted-foreground font-light">
+          {description}
+        </p>
         </div>
 
         <div className={`${reverse ? "lg:order-1" : ""}`}>
@@ -46,11 +49,6 @@ const ProjectBlock = ({ image, title, location, description, reverse = false }) 
         </div>
       </div>
 
-      <div className="space-y-8">
-        <p className="text-lg tracking-wide text-muted-foreground font-light">
-          {description}
-        </p>
-      </div>
     </motion.div>
   );
 };
