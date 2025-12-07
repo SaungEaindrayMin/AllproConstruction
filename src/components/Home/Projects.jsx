@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { Clock10Icon, MapPinIcon, PlusIcon } from "lucide-react";
+import { Clock10Icon, MapPinIcon, PlusIcon, Settings } from "lucide-react";
 import project1 from "../../../public/images/BurasiriKrungthep.jpeg";
-import project2 from "../../../public/images/JapaneseRestaurant.jpg";
+import project2 from "../../../public/images/ostal.jpg";
 import { useMessages } from "@/providers/I18nProvider";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -67,7 +67,7 @@ const ProjectCard = ({
                          />
 
                          <InfoItem
-                              icon={<MapPinIcon />}
+                              icon={<Settings />}
                               label="Service"
                               value={serviceItem}
                          />
@@ -79,7 +79,7 @@ const ProjectCard = ({
 
 const InfoItem = ({ icon, label, value }) => (
      <div className="flex items-center gap-2 lg:justify-start">
-          <div className="bg-primary-gradient text-secondary rounded-full p-1">
+          <div className="bg-primary-gradient text-secondary rounded-full p-1.5">
                {icon}
           </div>
           <p className="text-sm md:text-base text-muted-foreground">
@@ -106,8 +106,7 @@ export const Projects = () => {
                title: t.secondTitle,
                description: t.secondService,
                serviceItem: t.secondServiceItem,
-               location: t.firstServiceArea,
-
+               location: t.secondServiceArea,
                reverse: true,
           },
      ];
